@@ -1,0 +1,3730 @@
+{
+	"metadata": {
+		"name": "d013pplct10100",
+		"description": "DistriPoP Production RL 8.6",
+		"version": "1"
+	},
+	"apiVersion": "mdcap.robin.io/v1",
+	"kind": "ROBINCLUSTER",
+	"spec": {
+		"robin_config": {
+			"vrid": "1",
+			"agent_install_args": "--ignore-warnings --nics=bond0:1005:untagged --ip-protocol=ipv6 --enablerepo=AppStream,BaseOS --skip-kernel-check",
+			"ha_primary_install_args": "--ignore-warnings --ip-protocol=ipv6 --enablerepo=AppStream,BaseOS --nics=bond0:1005:untagged --vault-addr=https://psvau-service.1u1.local:8200 --k8s-cidr=2a00:fbc:70e0:23ed:c01:4002::/112",
+			"robin_user": "rcp-admin",
+			"primary_master": "d013psrms10101.nw.de.1u1.local.",
+			"secondary_masters": [
+				"d013psrms10102.nw.de.1u1.local.",
+				"d013psrms10103.nw.de.1u1.local."
+			],
+			"version": "5.3.13-126",
+			"robin_password": "**********",
+			"install_type": "HA",
+			"ip_pools": [],
+			"agents": [
+				"d013psrwk10101.nw.de.1u1.local.",
+				"d013psrwk10102.nw.de.1u1.local.",
+				"d013psrwk10103.nw.de.1u1.local.",
+				"d013psrwk10104.nw.de.1u1.local.",
+				"d013psrwk10105.nw.de.1u1.local.",
+				"d013psrwk10106.nw.de.1u1.local.",
+				"d013psrwk10107.nw.de.1u1.local.",
+				"d013psrwk10108.nw.de.1u1.local.",
+				"d013psrwk10109.nw.de.1u1.local.",
+				"d013psrwk1010a.nw.de.1u1.local.",
+				"d013psrwk1010b.nw.de.1u1.local.",
+				"d013psrwk1010c.nw.de.1u1.local.",
+				"d013psrwk1010d.nw.de.1u1.local.",
+				"d013psrwk1010e.nw.de.1u1.local.",
+				"d013psrwk1010f.nw.de.1u1.local.",
+				"d013psrwk10110.nw.de.1u1.local.",
+				"d013psrwk10111.nw.de.1u1.local.",
+				"d013psrwk10112.nw.de.1u1.local.",
+				"d013psrwk10113.nw.de.1u1.local.",
+				"d013psrwk10114.nw.de.1u1.local.",
+				"d013psrwk10115.nw.de.1u1.local.",
+				"d013psrwk10116.nw.de.1u1.local.",
+				"d013psrwk10117.nw.de.1u1.local.",
+				"d013psrwk10118.nw.de.1u1.local.",
+				"d013psrwk10119.nw.de.1u1.local.",
+				"d013psrwk1011a.nw.de.1u1.local.",
+				"d013psrwk1011b.nw.de.1u1.local.",
+				"d013psrwk1011c.nw.de.1u1.local.",
+				"d013psrwk1011d.nw.de.1u1.local.",
+				"d013psrwk1011e.nw.de.1u1.local.",
+				"d013psrwk1011f.nw.de.1u1.local.",
+				"d013psrwk10120.nw.de.1u1.local.",
+				"d013psrwk10121.nw.de.1u1.local.",
+				"d013psrwk10122.nw.de.1u1.local.",
+				"d013psrwk10123.nw.de.1u1.local.",
+				"d013psrwk10124.nw.de.1u1.local.",
+				"d013psrwk10125.nw.de.1u1.local.",
+				"d013psrwk10126.nw.de.1u1.local.",
+				"d013psrwk10127.nw.de.1u1.local.",
+				"d013psrwk10128.nw.de.1u1.local."
+			],
+			"ha_secondary_install_args": "--ignore-warnings --nics=bond0:1005:untagged --ip-protocol=ipv6 --enablerepo=AppStream,BaseOS --skip-kernel-check",
+			"security": {},
+			"name": "d013pplct10100",
+			"vip": "2a00:fbc:70e0:23ed:c01:2::",
+			"build_url": "https://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]:443/artifactory/rcp/Vendors/Robin/Robin_Platform/Early-Releases/5.3.13-126"
+		},
+		"infra": {
+			"d013psrwk10108.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10108.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:8:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:15ea",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10108",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:8:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9ZV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:8:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:8:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:8:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10103.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10103.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:3:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:37b6",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10103",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:3:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9TV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:3:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:3:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:3:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1011b.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1011b.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1b:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefc:e1f4",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1011b",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1b:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "D9HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1b:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1b:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1b:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10116.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10116.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:16:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3bf4",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10116",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:16:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "F9HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:16:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:16:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:16:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10120.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10120.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:20:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2316",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10120",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:20:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "F8HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:20:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:20:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:20:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10112.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10112.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:12:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3984",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10112",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:12:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9M5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:12:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:12:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:12:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrms10102.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrms10102.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:2002:2:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:4182",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrms10102",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:2002:2:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "F7HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:2:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:2:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:2:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1011c.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1011c.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1c:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:41b8",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1011c",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1c:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DCHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1c:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1c:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1c:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1010d.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1010d.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:d:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2a06",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1010d",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:d:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "BCHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:d:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:d:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:d:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10125.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10125.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:25:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3f96",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10125",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:25:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CBHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:25:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:25:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:25:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1011a.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1011a.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1a:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3c42",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1011a",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1a:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "BZV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1a:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1a:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1a:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10109.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10109.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:9:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:1cfe",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10109",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:9:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "C8HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:9:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:9:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:9:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10121.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10121.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:21:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:31bc",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10121",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:21:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DN5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:21:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:21:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:21:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10104.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10104.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:4:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefd:c162",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10104",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:4:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9YV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:4:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:4:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:4:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10117.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10117.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:17:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:1956",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10117",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:17:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CCHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:17:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:17:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:17:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrms10101.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrms10101.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:2002:1:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:26a0",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrms10101",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:2002:1:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DBHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:1:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:1:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:1:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1010c.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1010c.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:c:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2250",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1010c",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:c:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CL5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:c:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:c:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:c:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10113.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10113.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:13:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3450",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10113",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:13:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9VV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:13:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:13:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:13:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1011f.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1011f.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1f:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:4512",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1011f",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1f:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "C9HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1f:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1f:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1f:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10126.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10126.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:26:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:39a2",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10126",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:26:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DWV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:26:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:26:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:26:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10122.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10122.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:22:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:337e",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10122",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:22:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DM5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:22:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:22:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:22:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10119.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10119.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:19:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:177c",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10119",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:19:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "FBHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:19:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:19:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:19:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10106.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10106.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:6:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2a24",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10106",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:6:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DTV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:6:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:6:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:6:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10105.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10105.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:5:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3ac8",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10105",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:5:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9WV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:5:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:5:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:5:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10118.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10118.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:18:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:375c",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10118",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:18:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9P5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:18:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:18:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:18:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10101.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10101.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:1d70",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10101",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CZV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1010f.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1010f.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:f:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:425a",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1010f",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:f:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "FCHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:f:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:f:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:f:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10123.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10123.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:23:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3ba6",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10123",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:23:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DXV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:23:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:23:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:23:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10114.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10114.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:14:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:32b2",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10114",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:14:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "FN5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:14:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:14:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:14:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1011e.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1011e.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1e:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefd:cfde",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1011e",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1e:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "B8HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1e:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1e:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1e:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10110.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10110.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:10:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefd:c4b0",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10110",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:10:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CYV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:10:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:10:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:10:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1010b.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1010b.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:b:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2130",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1010b",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:b:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DL5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:b:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:b:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:b:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10127.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10127.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:27:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefb:e408",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10127",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:27:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "BDHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:27:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:27:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:27:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10115.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10115.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:15:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:38be",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10115",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:15:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "FL5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:15:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:15:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:15:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1010e.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1010e.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:e:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3594",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1010e",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:e:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "BN5SZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:e:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:e:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:e:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10102.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10102.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:2:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2322",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10102",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:2:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "D8HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:2:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:2:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:2:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrms10103.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrms10103.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:2002:3:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:46f8",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrms10103",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:2002:3:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "B9HSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:3:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:3:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:2002:3:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10107.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10107.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:7:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:3a14",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10107",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:7:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CTV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:7:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:7:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:7:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1011d.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1011d.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:1d:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefd:d4be",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1011d",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:1d:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "BBHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1d:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1d:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:1d:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10124.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10124.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:24:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:2aa2",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10124",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:24:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "9XV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:24:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:24:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:24:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk1010a.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk1010a.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:a:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefd:cd56",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk1010a",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:a:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "BYV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:a:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:a:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:a:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10128.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10128.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:28:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:1d1c",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10128",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:28:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "CDHSZQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:28:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:28:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:28:0",
+							"name": "bond0"
+						}
+					}
+				}
+			},
+			"d013psrwk10111.nw.de.1u1.local.": {
+				"metadata": {
+					"name": "d013psrwk10111.nw.de.1u1.local.",
+					"description": "DistriPoP Production RL 8.6",
+					"version": "1"
+				},
+				"apiVersion": "mdcap.robin.io/v1",
+				"kind": "BM",
+				"spec": {
+					"artifactory": {
+						"repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases",
+						"os_repo_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/repo/rcp//0.6.0/rocky_86",
+						"bmaas_artifactory_url": "http://rakuten-cloud-gen:s9UduTi-e1@[2a00:fbc:2110:14a5:b402:32:10:0]/artifactory/rcp/Vendors/Rakuten/RMP-Infra/Early-Releases/v0.6/bmaas/0.6.0"
+					},
+					"flavor": {
+						"os": "rocky_86",
+						"server_kind": "Rakuten-DI323C",
+						"vdu": "disabled",
+						"sriov": "enabled",
+						"vcu": "enabled",
+						"fwup": "enabled",
+						"fw_ver": "v0.6",
+						"nic_driver": "enabled"
+					},
+					"connectors": {
+						"ssh": {
+							"password": "**********",
+							"sshhost": "2a00:fbc:70e0:23ed:c01:3002:11:0",
+							"username": "root"
+						},
+						"bmc": {
+							"password": "**********",
+							"bmchost": "2a00:fbc:70e0:300b:928d:6eff:fefe:1bea",
+							"username": "root"
+						}
+					},
+					"os": {
+						"hostname": "d013psrwk10111",
+						"cloud_password": "**********",
+						"hostdomain": "nw.de.1u1.local.",
+						"root_password": "**********",
+						"ip": "2a00:fbc:70e0:23ed:c01:3002:11:0",
+						"dns": [
+							"2a00:fbc:2110:1400:91af:d251:0:5001"
+						],
+						"searchdomain": [
+							"nw.de.1u1.local."
+						],
+						"ostype": "rocky_86",
+						"ntp": [
+							"2a00:0fbc:70e0:23ed::ffff"
+						],
+						"gateway": "2a00:fbc:70e0:23ed::ffff"
+					},
+					"ks_script": {
+						"ver": "1.3.4-1/5g",
+						"pre": "pre-basic.sh",
+						"post": "post-basic.sh"
+					},
+					"config_url": "https://[2a00:fbc:2110:14a9:b406:0022:0000:0000]:30843/artifact/api/v1/bmaas/template_ks/kickstart/distripop-rocky86-master.cfg",
+					"serial_number": "DYV9YQ3",
+					"rcp": {
+						"ver": "v0.6",
+						"rev": "0.6.0",
+						"workload": "basic"
+					},
+					"network": {
+						"bootinterface": {
+							"prefix": "64",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:11:0",
+							"gateway": "2a00:fbc:70e0:23ed::ffff"
+						},
+						"vlaninterface": {
+							"gw": "2a00:fbc:70e0:23ed::ffff",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:11:0",
+							"name": "bond0.1005"
+						},
+						"bondinterface": {
+							"opts": "802.3ad",
+							"ip": "2a00:fbc:70e0:23ed:c01:3002:11:0",
+							"name": "bond0"
+						}
+					}
+				}
+			}
+		}
+	}
+}
